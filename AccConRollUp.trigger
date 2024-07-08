@@ -9,6 +9,7 @@ trigger AccConRollUp on Contact (after insert ,after update, after delete,after 
         }
         else if(trigger.isDelete){
             system.debug('test');
+            system.debug('test2');
             AccConRollUpHelper.DeleteHandler(trigger.old);
         }
     }
